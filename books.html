@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Books | 📚 READICTION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    /* Same CSS as About & Contact page */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .about-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .about-container h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .book-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .book-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .book-item img {
+      width: 80px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .book-info {
+      color: white;
+    }
+
+    .book-info h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .book-info p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2N49mgVGM4hkBJclxFJaWrHTLokFcbPCqOQ&s" alt="Logo" />
+      READICTION
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="gen.html">Genres</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="about-container">
+      <h1>Our Book Collection</h1>
+      <div class="book-list">
+        <div class="book-item">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg" alt="Book 1" />
+          <div class="book-info">
+            <h3>The Great Gatsby</h3>
+            <p>A classic novel by F. Scott Fitzgerald exploring the decadence and excess of the Jazz Age.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/91uwocAMtSL.jpg" alt="Book 2" />
+          <div class="book-info">
+            <h3>Where the Crawdads Sing</h3>
+            <p>A compelling mystery and coming-of-age story set in the marshlands of North Carolina.</p>
+          </div>
+        </div>
+        <div class="book-item">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg" alt="Book 3" />
+          <div class="book-info">
+            <h3>To Kill a Mockingbird</h3>
+            <p>Harper Lee’s timeless tale of racial injustice and childhood innocence in the Deep South.</p>
+          </div>
+        </div>
+        <!-- Add more book items as needed -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 READICTION. All rights reserved.
+  </footer>
+</body>
+</html>

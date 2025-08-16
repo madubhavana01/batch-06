@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comedy Books</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66') no-repeat center center/cover;
+      background-size: cover;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .comedy-books {
+      background: rgba(0,0,0,0.7);
+      min-height: 100vh;
+      padding: 30px;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    /* Back button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #0284c7;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .back-btn:hover { background-color: #0369a1; }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .book-card {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-card:hover { background: rgba(255,255,255,0.25); }
+
+    .book-card img {
+      width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .book-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .book-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .btn {
+      background-color: #ff9800;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+    }
+    .btn:hover { background-color: #e68900; }
+  </style>
+</head>
+<body>
+
+  <div class="comedy-books">
+    <!-- Back Button -->
+    <a href="gen.html" class="back-btn">← Back</a>
+
+    <h1>😂 Comedy Books Collection</h1>
+
+    <div class="book-grid">
+      <!-- Book 1 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/10521240-L.jpg" alt="Book Cover">
+        <h3>Bossypants</h3>
+        <p>by Tina Fey</p>
+        <button class="btn" onclick="borrowBook('Bossypants')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/10404170-L.jpg" alt="Book Cover">
+        <h3>Yes Please</h3>
+        <p>by Amy Poehler</p>
+        <button class="btn" onclick="borrowBook('Yes Please')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/9872460-L.jpg" alt="Book Cover">
+        <h3>Me Talk Pretty One Day</h3>
+        <p>by David Sedaris</p>
+        <button class="btn" onclick="borrowBook('Me Talk Pretty One Day')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/11153282-L.jpg" alt="Book Cover">
+        <h3>Is Everyone Hanging Out Without Me?</h3>
+        <p>by Mindy Kaling</p>
+        <button class="btn" onclick="borrowBook('Is Everyone Hanging Out Without Me?')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function borrowBook(bookTitle) {
+      let confirmBorrow = confirm(`Do you want to borrow "${bookTitle}"?`);
+      if (confirmBorrow) {
+        alert(`"${bookTitle}" has been borrowed! Enjoy the laughs 😄`);
+      }
+    }
+  </script>
+
+</body>
+</html>

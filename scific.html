@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Books</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1581090700227-4c4f50d85dfb') no-repeat center center/cover;
+      background-size: cover;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .science-books {
+      background: rgba(0,0,0,0.78);
+      min-height: 100vh;
+      padding: 30px;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    /* Back button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #0284c7;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .back-btn:hover { background-color: #0369a1; }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .book-card {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-card:hover { background: rgba(255,255,255,0.25); }
+
+    .book-card img {
+      width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .book-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .book-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+    }
+    .btn:hover { background-color: #388e3c; }
+  </style>
+</head>
+<body>
+
+  <div class="science-books">
+    <!-- Back Button -->
+    <a href="gen.html" class="back-btn">← Back</a>
+
+    <h1>🔬 Scientific Books Collection</h1>
+
+    <div class="book-grid">
+      <!-- Book 1 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Book Cover">
+        <h3>A Brief History of Time</h3>
+        <p>by Stephen Hawking</p>
+        <button class="btn" onclick="borrowBook('A Brief History of Time')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8102346-L.jpg" alt="Book Cover">
+        <h3>The Selfish Gene</h3>
+        <p>by Richard Dawkins</p>
+        <button class="btn" onclick="borrowBook('The Selfish Gene')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8114151-L.jpg" alt="Book Cover">
+        <h3>Cosmos</h3>
+        <p>by Carl Sagan</p>
+        <button class="btn" onclick="borrowBook('Cosmos')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/id/8226916-L.jpg" alt="Book Cover">
+        <h3>The Gene: An Intimate History</h3>
+        <p>by Siddhartha Mukherjee</p>
+        <button class="btn" onclick="borrowBook('The Gene: An Intimate History')">Borrow</button>
+        <a href="sample.pdf" class="btn" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function borrowBook(bookTitle) {
+      let confirmBorrow = confirm(`Do you want to borrow "${bookTitle}"?`);
+      if (confirmBorrow) {
+        alert(`"${bookTitle}" has been borrowed! Happy exploring 🔬📘`);
+      }
+    }
+  </script>
+
+</body>
+</html>
